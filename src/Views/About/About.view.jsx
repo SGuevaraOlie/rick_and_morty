@@ -6,9 +6,9 @@ const About = () => {
     <div className={styles.body}>
       <div className={styles.textBox}>
         <h1 className={styles.titulo}>¡Hola!</h1>
-        <p className={styles.parrafo}>Mi nombre es Santiago Guevara Olié</p>
-        <p className={styles.parrafo}>Soy un estudiante del bootcamp Fullstack Dev. de SoyHenry</p>
-        <p className={styles.parrafo}>En este proyecto, descargo mis conocimientos del Módulo 2, orientado a Front-End.</p>
+        <p className={styles.parrafo}>Mi nombre es Santiago Guevara Olié y soy estudiante del bootcamp Fullstack Dev de SoyHenry.</p>
+        <p className={styles.parrafo}>En este proyecto, aplico mis conocimientos del Módulo 2, centrado en Front-End.</p>
+        <p className={styles.parrafo}>Puedes encontrarme en GitHub y LinkedIn:</p>
         <a href='https://github.com/SGuevaraOlie/' target='_blank' className={styles.link}>Mi GitHub</a>
         <a href='https://www.linkedin.com/in/santiago-guevara-olié-aa039a161/' target='_blank' className={styles.link}>Mi Linkedin</a>
       </div>

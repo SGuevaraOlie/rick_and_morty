@@ -29,7 +29,7 @@
 
 .titulo{
     font-family: 'Ubuntu', sans-serif;
-    font-size: 7em;
+    font-size: 6em;
     color: #17ADCA;
     text-shadow: 0 0 0.2em black, 0 0 0.2em black;
     text-align: center;
@@ -41,7 +41,7 @@
     font-size: 2em;
     color: #17ADCA;
     text-shadow: 0 0 0.2em black, 0 0 0.2em black;
-    text-align: start;
+    text-align: center;
 }
 
 .link{

@@ -1,5 +1,12 @@
 .body{
+    height: 80vh;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.divText{
     flex-direction: column;
 }
 
@@ -34,8 +41,13 @@
 }
 
 .img{
-    position: relative;
-    top: 4%;
-    left: 80%;
-    width: 17.29%;
+    position: absolute;
+    left: -5%;
+    width: 30%;
+}
+
+@media screen and (max-width: 992px){
+    .img{
+        top: 40%;
+    }
 }
