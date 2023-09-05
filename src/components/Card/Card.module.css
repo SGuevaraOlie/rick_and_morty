@@ -1,0 +1,64 @@
+.div{
+    background-image: url("https://e1.pxfuel.com/desktop-wallpaper/454/117/desktop-wallpaper-rick-and-morty-portal-iphone-rick-and-morty-portal-thumbnail.jpg");
+    width: 330px;
+    height: 430px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: local;
+    display: flex;
+    border-style: solid;
+    border-color: #17ADCA;
+    border-width: 5px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    border-radius: 0.5em;
+    margin: 100px 10px 10px 10px ;
+}
+
+.image{
+    width: 330px;
+    height: 330px;
+    border-top-left-radius: 0.2em;
+    border-top-right-radius: 0.2em;
+    border-bottom-style: solid;
+    border-bottom-color: #17ADCA;
+    border-bottom-width: 5px;
+}
+
+.linkName{
+    text-decoration: none;
+}
+
+.name{
+    text-align: start;
+    margin: 0.9em 0 1.5em 0.2em;
+    max-width: 300px;
+    font-size: 2em;
+    text-shadow: 0 0 0.1em #17ADCA, 0 0 0.1em #17ADCA;
+    color: black;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:hover{
+        color: #17ADCA;
+        text-shadow: 0 0 0.1em black, 0 0 0.1em black;
+    }
+}
+
+.btn{
+    position: relative;
+    top: 1.53em;
+    left: 22.9em;
+    border-top-right-radius: 0.2em;
+    color: rgb(6, 255, 6);
+    background-color: black;
+    &:hover{
+        color: black;
+        background-color: rgb(6, 255, 6);
+        cursor: pointer;
+    }
+}
+

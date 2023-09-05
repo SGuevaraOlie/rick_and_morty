@@ -1,0 +1,54 @@
+.body{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.textBox{
+    margin: 0% 5% 0 0;
+    background-color: #282828e3;
+    width: 70%;
+}
+
+.imgbox{
+    width: 50%;
+}
+
+.imgHenry{
+    width: 582px;
+    height: 108px;
+    margin: 3% 0 2.3% 0;
+}
+
+.imgYo{
+    margin: 5% 0 5% 0;
+    border-radius: 100%;
+    width: 509px;
+    height: 509px;
+}
+
+.titulo{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 72pt;
+    color: #17ADCA;
+    text-shadow: 0 0 0.2em black, 0 0 0.2em black;
+    text-align: center;
+}
+
+.parrafo{
+    margin: 50px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 24pt;
+    color: #17ADCA;
+    text-shadow: 0 0 0.2em black, 0 0 0.2em black;
+    text-align: start;
+}
+
+.link{
+    margin: 50px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 24pt;
+    color: #17ADCA;
+    text-shadow: 0 0 0.2em black, 0 0 0.2em black;
+    text-align: start;
+}
