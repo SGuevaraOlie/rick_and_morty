@@ -29,7 +29,7 @@
 
 .titulo{
     font-family: 'Ubuntu', sans-serif;
-    font-size: 72pt;
+    font-size: 7em;
     color: #17ADCA;
     text-shadow: 0 0 0.2em black, 0 0 0.2em black;
     text-align: center;
@@ -38,17 +38,27 @@
 .parrafo{
     margin: 50px;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 24pt;
+    font-size: 2em;
     color: #17ADCA;
     text-shadow: 0 0 0.2em black, 0 0 0.2em black;
     text-align: start;
 }
 
 .link{
-    margin: 50px;
+    margin: 30px; 
     font-family: 'Ubuntu', sans-serif;
-    font-size: 24pt;
+    font-size: 2em;
     color: #17ADCA;
     text-shadow: 0 0 0.2em black, 0 0 0.2em black;
     text-align: start;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 992px){
+    .body{
+        flex-direction: column;
+    }
+    .textBox{
+        width: 100%;
+    }
 }

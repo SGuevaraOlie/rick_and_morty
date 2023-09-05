@@ -53,3 +53,14 @@
     }
 }
 
+@media screen and (max-width: 992px){
+    .navBar{
+        flex-direction: column;
+    }
+    .linkBrowser{
+        margin: 0;
+    }
+    .linkAbout{
+        margin: 0;
+    }
+}

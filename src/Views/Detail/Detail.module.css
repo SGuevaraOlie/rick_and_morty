@@ -32,3 +32,15 @@
     width: 509px;
     height: 509px;
 }
+
+@media screen and (max-width: 992px){
+    .divDetail{
+        flex-direction: column;
+    }
+    .dataBox{
+        width: 100%;
+    }
+    .img{
+        margin: 10%;
+    }
+}

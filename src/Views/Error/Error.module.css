@@ -1,0 +1,41 @@
+.body{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo{
+    margin: 50px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 72pt;
+    color: #17ADCA;
+    text-shadow: 0 0 0.2em black, 0 0 0.2em black;
+    text-align: center;
+}
+
+.parrafo{
+    margin: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 24pt;
+    color: #17ADCA;
+    text-shadow: 0 0 0.2em black, 0 0 0.2em black;
+    text-align: center;
+}
+
+.link{
+    margin: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 24pt;
+    color: #17ADCA;
+    text-shadow: 0 0 0.2em black, 0 0 0.2em black;
+    text-align: center;
+    &:hover{
+        color: rgb(6, 255, 6);
+    }
+}
+
+.img{
+    position: relative;
+    top: 4%;
+    left: 80%;
+    width: 17.29%;
+}

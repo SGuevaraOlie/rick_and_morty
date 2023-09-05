@@ -51,7 +51,7 @@ function App() {
             <Route path={PATHROUTES.BROWSER} element={<Cards characters={characters} onClose={onClose}/>}/>
             <Route path={PATHROUTES.ABOUT} element={<About />} />
             <Route path={PATHROUTES.DETAIL} element={<Detail />} />
-            <Route path='*' element={Error} />
+            <Route path='*' element={<Error />} />
          </Routes>
       </div>
    );
