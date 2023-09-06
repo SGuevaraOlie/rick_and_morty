@@ -29,8 +29,8 @@
 .img{
     margin: 6.86% 0 6.86% 0;
     border-radius: 100%;
-    width: 509px;
-    height: 509px;
+    width: 570px;
+    height: 570px;
 }
 
 @media screen and (max-width: 992px){
@@ -41,6 +41,6 @@
         width: 100%;
     }
     .img{
-        margin: 10%;
+        margin: 13.5%;
     }
 }

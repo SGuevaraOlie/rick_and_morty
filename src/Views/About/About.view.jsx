@@ -12,9 +12,9 @@ const About = () => {
         <a href='https://github.com/SGuevaraOlie/' target='_blank' className={styles.link}>Mi GitHub</a>
         <a href='https://www.linkedin.com/in/santiago-guevara-olié-aa039a161/' target='_blank' className={styles.link}>Mi Linkedin</a>
       </div>
-      <div className={styles.imgBox}>
-        <img src={'https://i.ibb.co/71xyXjs/Whats-App-Image-2023-04-28-at-21-29-51-1.jpg'} alt='' className={styles.imgYo}></img>
+      <div>
         <img src={'https://assets.soyhenry.com/henry-landing/assets/Henry/logo-white.png'} alt='' className={styles.imgHenry}></img>
+        <img src={'https://i.ibb.co/71xyXjs/Whats-App-Image-2023-04-28-at-21-29-51-1.jpg'} alt='' className={styles.imgYo}></img>
       </div>
     </div>
   )

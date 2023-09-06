@@ -10,10 +10,6 @@
     width: 70%;
 }
 
-.imgbox{
-    width: 50%;
-}
-
 .imgHenry{
     width: 582px;
     height: 108px;
@@ -23,8 +19,8 @@
 .imgYo{
     margin: 5% 0 5% 0;
     border-radius: 100%;
-    width: 509px;
-    height: 509px;
+    width: 586px;
+    height: 586px;
 }
 
 .titulo{
