@@ -1,20 +1,49 @@
+// Styles
 import './App.css';
-import {useState} from "react";
-import Cards from './components/Cards/Cards.jsx';
-import Nav from './components/Nav/Nav';
-import Detail from './Views/Detail/Detail.view';
+// Hooks
+import { useState, useEffect } from "react";
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import axios from 'axios';
+// Components
+import Nav from './components/Nav/Nav';
+import Form from './components/Form/Form';
+import Cards from './components/Cards/Cards.jsx';
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.jsx";
+// Views
+import Detail from './Views/Detail/Detail.view';
 import About from './Views/About/About.view.jsx'
-import { Routes, Route } from "react-router-dom";
-import PATHROUTES from './helpers/PathRoutes.helper';
 import Error from './Views/Error/Error';
 import Home from './Views/Home/Home.view';
+// Helpers
+import PATHROUTES from './helpers/PathRoutes.helper';
 
 
 
 function App() {
 
+   const {pathname} = useLocation()
+
    const [characters, setCharacters] = useState([])
+
+   const navigate = useNavigate();
+   const [access, setAccess] = useState(false);
+   const EMAIL = 'santiguevara98@gmail.com';
+   const PASSWORD = 'proyecto1';
+
+   const login = (userData) => {
+      if (userData.password === PASSWORD && userData.email === EMAIL){
+         setAccess(true);
+         navigate(PATHROUTES.HOME);
+      }
+   }
+   useEffect(() => {
+      !access && navigate('/');
+   }, [access]);
+
+   const logout = () => {
+      setAccess(false);
+      navigate(PATHROUTES.LOGIN);
+   }
    
    const onSearch = (id) => {
       if (isNaN(id) || id <= 0 || id > 826) {
@@ -45,13 +74,14 @@ function App() {
 
    return (
       <div className='App'>
-         <Nav onSearch={onSearch} onRandomSearch={onRandomSearch}/>
+         {pathname !==  '/' && <Nav onSearch={onSearch} onRandomSearch={onRandomSearch} onLogOut={logout}/>}
          <Routes>
+            <Route path={PATHROUTES.LOGIN} element={<Form login={login} />} />
             <Route path={PATHROUTES.HOME} element={<Home />} />
             <Route path={PATHROUTES.BROWSER} element={<Cards characters={characters} onClose={onClose}/>}/>
             <Route path={PATHROUTES.ABOUT} element={<About />} />
             <Route path={PATHROUTES.DETAIL} element={<Detail />} />
-            <Route path='*' element={<Error />} />
+            <Route path={PATHROUTES.ERROR} element={<Error />} />
          </Routes>
       </div>
    );

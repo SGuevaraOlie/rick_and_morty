@@ -1,6 +1,6 @@
 .navBar {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     position: sticky;
     top: 0;
     width: 100%;
@@ -10,6 +10,10 @@
     padding-bottom: 1.5em;
     overflow: hidden;
     z-index: 100;
+}
+
+.containerLinks{
+    display: flex;
 }
 
 .linkHome{
@@ -53,14 +57,41 @@
     }
 }
 
+.btn{
+    font-family: 'Ubuntu', sans-serif;
+    max-height: 31px;
+    max-width: 70px;
+    padding: 6px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 5px;
+    border-color: red;
+    background-color: black;
+    color:red;
+    white-space: nowrap;
+    &:hover{
+        background-color: red;
+        color: black;
+    }
+}
+
+
 @media screen and (max-width: 992px){
     .navBar{
         flex-direction: column;
     }
+    .containerLinks{
+        flex-direction: column;
+    }
+    .titulo{
+        margin: 8px 15px 10px 15px;
+    }
     .linkBrowser{
-        margin: 8px 15px 10px 20px;
+        margin: 8px 15px 10px 14px;
     }
     .linkAbout{
-        margin: 8px 15px 10px 20px;
+        margin: 8px 15px 10px 14px;
+    }
+    .btn{
+        margin: 15px auto;
     }
 }

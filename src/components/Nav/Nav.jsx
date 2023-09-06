@@ -9,16 +9,19 @@ import PATHROUTES from '../../helpers/PathRoutes.helper';
 
 const Nav = (props) => {
 
-  const {onSearch,onRandomSearch} = props;
+  const {onSearch,onRandomSearch, onLogOut} = props;
 
   return (
     <div className={styles.navBar}>
-      <Link to={PATHROUTES.HOME} className={styles.linkHome}><h1 className={styles.titulo}>Rick and Morty API</h1></Link>
-      <Link to={PATHROUTES.BROWSER} className={styles.linkBrowser}>Browser</Link>
-      <Link to={PATHROUTES.ABOUT} className={styles.linkAbout}>About me</Link>
+      <div className={styles.containerLinks}>
+        <Link to={PATHROUTES.HOME} className={styles.linkHome}><h1 className={styles.titulo}>Rick and Morty API</h1></Link>
+        <Link to={PATHROUTES.BROWSER} className={styles.linkBrowser}>Browser</Link>
+        <Link to={PATHROUTES.ABOUT} className={styles.linkAbout}>About me</Link>
+      </div>
       <Routes>
       <Route path={PATHROUTES.BROWSER} element={<SearchBar onSearch={onSearch} onRandomSearch={onRandomSearch}/>} />
       </Routes>
+      <button onClick={onLogOut} className={styles.btn}>Log Out</button>
     </div>
   )
 }

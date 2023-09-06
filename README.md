@@ -14,3 +14,8 @@ Podremos visualizar las tarjetas de personajes con su imagen y nombre correspond
 Utilizamos React para modularizar el código.
 Trabajamos sobre una interfaz con CSS para ofrecer una experiencia atractiva, intuitiva y funcional.
 
+# Credenciales de ingreso
+---
+Para poder acceder a la aplicación correctamente, deberá ingresar con las siguientes credenciales:
+Email: "santiguevara98@gmail.com"
+Password: "proyecto1"

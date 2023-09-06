@@ -1,0 +1,109 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form{
+    width: 430px;
+    height: 650px;
+    background-color: #636262e3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.img{
+    width: 80%;
+    margin-right: 20px;
+}
+
+.title{
+    margin: -10px 275px 20px 0;
+    color: #17ADCA;
+    text-shadow: 0 0 0.2em black, 0 0 0.2em black;
+    font-size: 27pt;
+}
+
+.mailDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.labelMail{
+    font-size: 13pt;
+    color: #17ADCA;
+    text-shadow: 0 0 0.2em black, 0 0 0.2em black;
+    margin-left: 5px;
+}
+
+.inputEmail{
+    font-family: 'Ubuntu', sans-serif;
+    width: 350px;
+    border-radius: 5px;
+    border-color: rgb(6, 255, 6);
+    background-color: black;
+    color:rgb(6, 255, 6);
+    &:focus{
+        outline: none;
+        background-color: rgb(6, 255, 6);
+        color: black;
+    }
+}
+
+.passDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    
+}
+
+.labelPass{
+    font-size: 13pt;
+    color: #17ADCA;
+    text-shadow: 0 0 0.2em black, 0 0 0.2em black;
+    margin-left: 5px;
+}
+
+.inputPassword{
+    font-family: 'Ubuntu', sans-serif;
+    width: 350px;
+    border-radius: 5px;
+    border-color: rgb(6, 255, 6);
+    background-color: black;
+    color:rgb(6, 255, 6);
+    &:focus{
+        outline: none;
+        background-color: rgb(6, 255, 6);
+        color: black;
+    }
+}
+
+.btn{
+    font-family: 'Ubuntu', sans-serif;
+    padding: 6px;
+    margin: 10px 10px 15px 10px;
+    border-radius: 5px;
+    border-color: rgb(6, 255, 6);
+    background-color: black;
+    color:rgb(6, 255, 6);
+    &:hover{
+        background-color: rgb(6, 255, 6);
+        color: black;
+    }
+}
+
+.error{
+    margin-top: 1px;
+    font-size: 9pt;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 5px;
+    color: rgb(196, 33, 33);
+    text-shadow: 0 0 0.2em black, 0 0 0.2em black;
+}
