@@ -23,9 +23,11 @@ function App() {
 
    const {pathname} = useLocation()
 
+   // Cards state
    const [characters, setCharacters] = useState([])
-
    const navigate = useNavigate();
+
+   // Login
    const [access, setAccess] = useState(false);
    const EMAIL = 'santiguevara98@gmail.com';
    const PASSWORD = 'proyecto1';
