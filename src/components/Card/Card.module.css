@@ -15,6 +15,7 @@
     justify-content: space-evenly;
     border-radius: 0.5em;
     margin: 100px 10px 10px 10px ;
+    position: relative;
 }
 
 .image{
@@ -26,6 +27,7 @@
     border-bottom-color: #17ADCA;
     border-bottom-width: 5px;
     align-items: flex-start;
+    margin-top: 16px;
 }
 
 .linkName{
@@ -33,7 +35,8 @@
 }
 
 .name{
-    margin: 0.9em 0 1.5em 0.2em;
+    margin: 0.8em 0 1.3em 0.2em;
+    padding: 0.1em;
     max-width: 300px;
     font-size: 2em;
     text-shadow: 0 0 0.1em #17ADCA, 0 0 0.1em #17ADCA;
@@ -49,10 +52,9 @@
 }
 
 .btn{
-    position: relative;
-    align-items: flex-start;
-    top: 1.53em;
-    left: 22.9em;
+    position: absolute;
+    top: 0px;
+    left: 305.5px;
     border-top-right-radius: 0.2em;
     color: rgb(6, 255, 6);
     background-color: black;
@@ -63,3 +65,11 @@
     }
 }
 
+.favBtn{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: none;
+    background: transparent;
+    font-size: 24pt;
+}

@@ -8,6 +8,7 @@ import axios from 'axios';
 import Nav from './components/Nav/Nav';
 import Form from './components/Form/Form';
 import Cards from './components/Cards/Cards.jsx';
+import Favorites from './components/Favorites/Favorites';
 // Views
 import Detail from './Views/Detail/Detail.view';
 import About from './Views/About/About.view.jsx'
@@ -80,6 +81,7 @@ function App() {
             <Route path={PATHROUTES.BROWSER} element={<Cards characters={characters} onClose={onClose}/>}/>
             <Route path={PATHROUTES.ABOUT} element={<About />} />
             <Route path={PATHROUTES.DETAIL} element={<Detail />} />
+            <Route path={PATHROUTES.FAVORITES} element={<Favorites />} />
             <Route path='x' element={<Error />} />
          </Routes>
       </div>

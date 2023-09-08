@@ -57,6 +57,19 @@
     }
 }
 
+.linkFavorites{
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16pt;
+    color: #17ADCA;
+    text-shadow: 0 0 0.2em black, 0 0 0.2em black;
+    margin: 13px 15px 10px 40px;    
+    white-space: nowrap;
+    &:hover{
+        color: rgb(6, 255, 6);
+    }
+}
+
 .btn{
     font-family: 'Ubuntu', sans-serif;
     max-height: 31px;
@@ -89,6 +102,9 @@
         margin: 8px 15px 10px 14px;
     }
     .linkAbout{
+        margin: 8px 15px 10px 14px;
+    }
+    .linkFavorites{
         margin: 8px 15px 10px 14px;
     }
     .btn{

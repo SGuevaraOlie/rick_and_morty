@@ -17,6 +17,7 @@ const Nav = (props) => {
         <Link to={PATHROUTES.HOME} className={styles.linkHome}><h1 className={styles.titulo}>Rick and Morty API</h1></Link>
         <Link to={PATHROUTES.BROWSER} className={styles.linkBrowser}>Browser</Link>
         <Link to={PATHROUTES.ABOUT} className={styles.linkAbout}>About me</Link>
+        <Link to={PATHROUTES.FAVORITES} className={styles.linkFavorites}>Favorites</Link>
       </div>
       <Routes>
       <Route path={PATHROUTES.BROWSER} element={<SearchBar onSearch={onSearch} onRandomSearch={onRandomSearch}/>} />

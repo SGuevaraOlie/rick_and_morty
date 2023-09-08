@@ -4,6 +4,7 @@ const PATHROUTES = {
     BROWSER: '/browser',
     ABOUT: '/about',
     DETAIL: '/detail/:id',
+    FAVORITES: '/favorites',
     ERROR: '*',
 }
 
