@@ -48,7 +48,7 @@ function App() {
    }
    
    const onSearch = (id) => {
-      if (isNaN(id) || id <= 0 || id > 5) {
+      if (isNaN(id) || id <= 0 || id > 826) {
          window.alert('¡No hay personajes con este ID!')
       }
       axios(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {
@@ -62,7 +62,7 @@ function App() {
    }
 
    const onRandomSearch = () => {
-      const randomId = Math.floor(Math.random()*5)
+      const randomId = Math.floor(Math.random()*826)
       onSearch(randomId);
    }
 
