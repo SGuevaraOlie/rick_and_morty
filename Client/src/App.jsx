@@ -3,6 +3,7 @@ import './App.css';
 // Hooks
 import { useState, useEffect } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { useDispatch } from 'react-redux';
 import axios from 'axios';
 // Components
 import Nav from './components/Nav/Nav';
@@ -16,10 +17,13 @@ import Error from './Views/Error/Error';
 import Home from './Views/Home/Home.view';
 // Helpers
 import PATHROUTES from './helpers/PathRoutes.helper';
+import { removeFav } from './redux/actions';
 
 
 
 function App() {
+
+   const Dispatch = useDispatch();
 
    const {pathname} = useLocation()
 
@@ -71,9 +75,10 @@ function App() {
    const onClose = (id) => {
       setCharacters(
          characters.filter((char) => {
-            return char.id !== Number(id)
+            return char.id !== id
          })
-      )
+      );
+      Dispatch(removeFav(id))
    }
 
    return (

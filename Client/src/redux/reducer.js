@@ -6,8 +6,8 @@ const initialState = {
     allCharacters: []
 }
 
-const rootReducer = (state = initialState, action) => {
-    switch (action.type) {
+const rootReducer = (state = initialState, {type, payload}) => {
+    switch (type) {
         case ADD_FAV:
             return { ...state, myFavorites: payload, allCharacters: payload };
         case REMOVE_FAV:
