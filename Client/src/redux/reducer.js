@@ -11,13 +11,13 @@ const rootReducer = (state = initialState, {type, payload}) => {
         case ADD_FAV:
             return { ...state, myFavorites: payload, allCharacters: payload };
         case REMOVE_FAV:
-            return { ...state, myFavorites: payload };
+            return { ...state, myFavorites: payload, allCharacters: payload };
         case FILTER:
-            return { ...state, myFavorites: action.payload === "All" ? [...state.allCharacters] : state.allCharacters.filter((char) => char.gender === action.payload)}
+            return { ...state, myFavorites: payload === "All" ? [...state.allCharacters] : state.allCharacters.filter((char) => char.gender === payload)}
         case ORDER:
             return { ...state, myFavorites: state.allCharacters.sort((a,b) => {
-                if (action.payload === "A") return a.id - b.id;
-                else if (action.payload === "D") return b.id - a.id;
+                if (payload === "A") return a.id - b.id;
+                else if (payload === "D") return b.id - a.id;
                 else return 0;
             })}
         default:
