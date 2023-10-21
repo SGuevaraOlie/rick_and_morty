@@ -10,6 +10,7 @@ import Nav from './components/Nav/Nav';
 import Form from './components/Form/Form';
 import Cards from './components/Cards/Cards.jsx';
 import Favorites from './components/Favorites/Favorites';
+import ProtectedRoute from './components/protectedRoute/protectedRoute';
 // Views
 import Detail from './Views/Detail/Detail.view';
 import About from './Views/About/About.view.jsx'
@@ -32,15 +33,18 @@ function App() {
    const navigate = useNavigate();
 
    // Login
-   const [access, setAccess] = useState(false);
+   const [access, setAccess] = useState(
+      localStorage.getItem("isLoggedIn") === "true"
+   );
 
    const login = async (userData) => {
+      const { email, password } = userData;
       try {
-         const { email, password } = userData;
          const URL = 'http://localhost:3001/rickandmorty/login/';
          const { data } = await axios(URL + `?email=${email}&password=${password}`)
          const { access } = data;
          setAccess(data);
+         localStorage.setItem("isLoggedIn", "true");
          access && navigate('/home');
       } catch (error) {
          console.log(error);
@@ -53,6 +57,7 @@ function App() {
 
    const logout = () => {
       setAccess(false);
+      localStorage.removeItem("isLoggedIn")
       navigate(PATHROUTES.LOGIN);
    }
    
@@ -93,12 +98,14 @@ function App() {
          {pathname !==  '/' && <Nav onSearch={onSearch} onRandomSearch={onRandomSearch} onLogOut={logout}/>}
          <Routes>
             <Route path={PATHROUTES.LOGIN} element={<Form login={login} />} />
-            <Route path={PATHROUTES.HOME} element={<Home />} />
-            <Route path={PATHROUTES.BROWSER} element={<Cards characters={characters} onClose={onClose}/>}/>
-            <Route path={PATHROUTES.ABOUT} element={<About />} />
-            <Route path={PATHROUTES.DETAIL} element={<Detail />} />
-            <Route path={PATHROUTES.FAVORITES} element={<Favorites />} />
-            <Route path='x' element={<Error />} />
+            <Route element={<ProtectedRoute canActivate={access} />}>
+               <Route path={PATHROUTES.HOME} element={<Home />} />
+               <Route path={PATHROUTES.BROWSER} element={<Cards characters={characters} onClose={onClose}/>}/>
+               <Route path={PATHROUTES.ABOUT} element={<About />} />
+               <Route path={PATHROUTES.DETAIL} element={<Detail />} />
+               <Route path={PATHROUTES.FAVORITES} element={<Favorites />} />
+            </Route>
+            <Route path={PATHROUTES.ERROR} element={<Error />} />
          </Routes>
       </div>
    );

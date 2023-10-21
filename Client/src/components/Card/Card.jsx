@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 const Card = (props) => {
 
-   const {id, name, status, species, gender, origin, image, onClose, addFav, removeFav, myFavorites} = props
+   const {id, name, image, onClose, addFav, removeFav, myFavorites} = props
 
    const [isFav, setIsFav] = useState(false);
 
@@ -19,7 +19,7 @@ const Card = (props) => {
 
    useEffect(() => {
       myFavorites.forEach((fav)=>{
-         if (fav.id === props.id){
+         if (Number(fav.id) === Number(props.id)){
             setIsFav(true);
          }
       });

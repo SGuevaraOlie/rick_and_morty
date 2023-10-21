@@ -1,4 +1,3 @@
-const express = require('express');
 // Router
 const router = require('express').Router();
 // Controllers
