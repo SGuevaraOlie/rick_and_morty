@@ -5,11 +5,13 @@ Alumno: Santiago Guevara Olié 🤓
 API: Rick and Morty 👽 
 
 # Descripción
-Este proyecto integrador tiene como propósito poner en práctica los conocimientos adquiridos en los módulos 2 y 3 del curso de Desarrollo Web FullStack de SoyHenry.
+Este proyecto integrador tiene como propósito poner en práctica los conocimientos adquiridos en los módulos 2, 3 y 4 del curso de Desarrollo Web FullStack de SoyHenry.
 
 En la parte del Cliente, empleamos HTML, CSS, JavaScript y React, haciendo uso de Vite como herramienta de desarrollo. Creamos un buscador de personajes de la serie Rick y Morty, presentando la información en tarjetas acompañadas de imágenes.
 
 En la parte del Servidor, utilizamos Node, Express, Axios y Jest para gestionar la base de datos de la aplicación de React desarrollada en el módulo anterior.
+
+También implementamos el uso de una Base de datos con Sequelize.
 # Características
 - Visualización de tarjetas de personajes con imágenes y nombres, con acceso a detalles.
 - Modularización del código utilizando React.
@@ -24,15 +26,15 @@ Para probar el proyecto de forma local, realiza un fork para manejar una copia l
 Carpeta Server:
 - `npm install` (para instalar las dependencias)
 - `npm test` (para correr los testeos del servidor)
-- `npm start (para inicializar el servidor) 
+- `npm start` (para inicializar el servidor) 
 
 Carpeta Client:
 - `npm install` (para instalar las dependencias)
 - `npm run dev` (para inicializar la página)
 # Problemas con el proyecto
-Quedó pendiente la resolución del problema de la página de Error, ya que al ingresar una URL inválida, se redirige al login screen.
+Está pendiente un error en consola relacionado al componente Nav y las rutas.
 # Datos de contacto
 - Gmail: santiguevara98@gmail.com
 - Linkedin: <a href='https://www.linkedin.com/in/santiago-guevara-olié-aa039a161/'>Perfil de Linkedin</a>
 - Github: <a href=https://github.com/SGuevaraOlie>Perfil de Github</a>
-- Repositorio del proyecto: <a href=https://github.com/SGuevaraOlie/rick_and_morty>Rick And Morty Repo</a>
+- Repositorio del proyecto: <a href=https://github.com/SGuevaraOlie/rick_and_morty>Rick And Morty Repo</a> 
