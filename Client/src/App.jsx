@@ -26,7 +26,7 @@ function App() {
 
    const Dispatch = useDispatch();
 
-   const {pathname} = useLocation()
+   const { pathname } = useLocation()
 
    // Cards state
    const [characters, setCharacters] = useState([])
@@ -43,9 +43,9 @@ function App() {
          const URL = 'http://localhost:3001/rickandmorty/login/';
          const { data } = await axios(URL + `?email=${email}&password=${password}`)
          const { access } = data;
-         setAccess(data);
+         setAccess(data.access);
          localStorage.setItem("isLoggedIn", "true");
-         access && navigate('/home');
+         access && navigate(PATHROUTES.HOME);
       } catch (error) {
          console.log(error);
       }
